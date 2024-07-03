@@ -1,11 +1,13 @@
 import React from 'react'
 import Navigation from './customer/components/Navigation/Navigation'
+import MainCarousel from './customer/components/HomeCrousel/MainCrousel'
 
 function App() {
   return (
     <div>
       <Navigation/>
-      <div className="container text-center text-cyan-400">this is new</div>
+  
+      <MainCarousel/>
     </div>
   )
 }

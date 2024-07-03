@@ -1,22 +1,30 @@
 import React from 'react';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
+import { maincrouselData } from './MainCrouselData';
 
+const MainCrousel = () => {
+    
+    const items = maincrouselData.map((item, index) => (
+        <img
+            key={index}
+            className='cursor-pointer object-cover max-w-1400 max-h-500'
+            role='presentation'
+            src={item.image}
+            alt=""
+        />
+    ));
 
-const items = [
-    <div className="item" data-value="1">1</div>,
-    <div className="item" data-value="2">2</div>,
-    <div className="item" data-value="3">3</div>,
-    <div className="item" data-value="4">4</div>,
-    <div className="item" data-value="5">5</div>,
-];
+    return (
+        <AliceCarousel
+            autoPlay
+            autoPlayInterval={1500}
+            items={items}
+            infinite
+            disableButtonsControls
+            disableDotsControls
+        />
+    );
+}
 
-const MainCarousel = () => (
-    <AliceCarousel
-        mouseTracking
-        items={items}
-        controlsStrategy="alternate"
-    />
-);
-
-export default MainCarousel;
+export default MainCrousel;
