@@ -1,6 +1,7 @@
 import React from 'react'
 import Navigation from './customer/components/Navigation/Navigation'
 import MainCarousel from './customer/components/HomeCrousel/MainCrousel'
+import HomeCart from './customer/components/HomeCart/HomeCart'
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Navigation/>
   
       <MainCarousel/>
+      <HomeCart/>
     </div>
   )
 }
