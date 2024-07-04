@@ -8,7 +8,7 @@ const MainCrousel = () => {
     const items = maincrouselData.map((item, index) => (
         <img
             key={index}
-            className='cursor-pointer object-cover max-w-1400 max-h-500'
+            className='w-full h-96 object-cover cursor-pointer'
             role='presentation'
             src={item.image}
             alt=""
