@@ -4,9 +4,9 @@ import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import { womenClosthes } from "../../../data/women.clothes";
 
-const HomeCarousel = () => {
+
+const HomeCarousel = ({data,sectionName}) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const carouselRef = useRef(null);
 
@@ -17,7 +17,7 @@ const HomeCarousel = () => {
     1024: { items: 5 },
   };
 
-  const items = womenClosthes.slice(0,10).map((item, index) => (
+  const items = data.slice(0,10).map((item, index) => (
     <HomeCart product={item} key={index} />
   ));
 
@@ -38,7 +38,8 @@ const HomeCarousel = () => {
   const syncActiveIndex = ({ item }) => setActiveIndex(item);
 
   return (
-    <div className="px-4 lg:px-8">
+    <div>
+      <h2 className="text-3xl font-extrabold text-gray-800 py-5">{sectionName}</h2>
       <div className="relative p-5">
         <AliceCarousel
           ref={carouselRef}
