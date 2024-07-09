@@ -4,6 +4,7 @@ import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import { womenClosthes } from "../../../data/women.clothes";
 
 const HomeCarousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -13,11 +14,11 @@ const HomeCarousel = () => {
     0: { items: 1 },
     568: { items: 2 },
     767: { items: 3 },
-    1024: { items: 5.5 },
+    1024: { items: 5 },
   };
 
-  const items = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map((item, index) => (
-    <HomeCart key={index} />
+  const items = womenClosthes.slice(0,10).map((item, index) => (
+    <HomeCart product={item} key={index} />
   ));
 
   const slidePrev = () => {
@@ -52,7 +53,7 @@ const HomeCarousel = () => {
         {activeIndex !== 0 && (
           <button
             onClick={slidePrev}
-            className="z-50 absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-200 py-2 rounded-md hover:bg-gray-400 active:bg-gray-300"
+            className="z-50 absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-200 py-2 rounded-md hover:bg-gray-400 active:bg-gray-300 h-[4rem] w-[2rem]"
             aria-label="previous"
           >
             <KeyboardArrowLeftIcon />
@@ -61,7 +62,7 @@ const HomeCarousel = () => {
         {activeIndex !== items.length - 5 && (
           <button
             onClick={slideNext}
-            className="z-50 absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-200 py-2 rounded-md hover:bg-gray-400 active:bg-gray-300"
+            className="z-50 absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-200 py-2 rounded-md hover:bg-gray-400 active:bg-gray-300 h-[4rem] w-[2rem]"
             aria-label="next"
           >
             <KeyboardArrowRightIcon />
