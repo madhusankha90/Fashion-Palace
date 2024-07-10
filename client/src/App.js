@@ -1,15 +1,20 @@
 import React from "react";
 import Navigation from "./customer/components/Navigation/Navigation";
-import MainCarousel from "./customer/components/HomeCrousel/MainCrousel";
-import HomeCarousel from "./customer/components/HomeCarousel/HomeCarousel";
+import HomePage from "./customer/pages/HomePage";
+import Footer from "./customer/components/Footer/Footer";
 
 function App() {
   return (
-    <div>
-      <Navigation />
-
-      <MainCarousel />
-      <HomeCarousel />
+    <div className="">
+      <div>
+        <Navigation />
+      </div>
+      <div>
+        <HomePage />
+      </div>
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }
