@@ -72,7 +72,6 @@ const Footer = () => {
               <Button className="pb-5 variant-h6 gutterBottom">About</Button>
             </div>
           </Grid>
-          
         </Grid>
       
      
