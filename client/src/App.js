@@ -1,7 +1,7 @@
 import React from "react";
 import Navigation from "./customer/components/Navigation/Navigation";
 import HomePage from "./customer/pages/HomePage";
-import Footer from "./customer/components/Footer/Footer";
+import Footer from "./customer/components/Footer/Footer"
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <HomePage />
       </div>
       <div>
-        <Footer />
+        <Footer/>
       </div>
     </div>
   );
