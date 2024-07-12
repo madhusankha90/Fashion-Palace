@@ -6,7 +6,7 @@ import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
 
-const HomeCarousel = ({data,sectionName}) => {
+const HomeCarousel = ({data,sectionName,textColor}) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const carouselRef = useRef(null);
 
@@ -39,7 +39,7 @@ const HomeCarousel = ({data,sectionName}) => {
 
   return (
     <div>
-      <h2 className="text-3xl font-extrabold text-gray-800 py-5">{sectionName}</h2>
+      <h2 className="text-3xl font-extrabold py-5" style={{color:textColor}}>{sectionName}</h2>
       <div className="relative p-5">
         <AliceCarousel
           ref={carouselRef}
