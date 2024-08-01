@@ -142,11 +142,11 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+export default function Navigation() {
   const [open, setOpen] = useState(false)
 
   return (
-    <div className="bg-white">
+    <div className="bg-white z-50">
       {/* Mobile menu */}
       <Dialog className="relative z-40 lg:hidden" open={open} onClose={setOpen}>
         <DialogBackdrop
