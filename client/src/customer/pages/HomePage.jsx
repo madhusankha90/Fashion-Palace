@@ -5,6 +5,7 @@ import { womenClosthes } from '../../data/women.clothes'
 import { green, grey, yellow } from '@mui/material/colors'
 import { menClothes } from '../../data/mens.clothes'
 import { kids } from '../../data/kids'
+import { seasonalCollection } from '../../data/seasonalCollection'
 
 
 
@@ -18,7 +19,7 @@ const HomePage = () => {
             <HomeCarousel data= {womenClosthes} sectionName={"SHOP FOR WOMEN"} textColor={grey[800]}/>
             <HomeCarousel data= {menClothes} sectionName={"SHOP FOR MEN"} textColor={grey[800]}/>
             <HomeCarousel data= {kids} sectionName={"SHOP FOR KIDS"} textColor={grey[800]}/>
-            <HomeCarousel data= {womenClosthes} sectionName={"SEASONAL COLLECTIONS"} textColor={grey[800]}/>
+            <HomeCarousel data= {seasonalCollection} sectionName={"SEASONAL COLLECTIONS"} textColor={grey[800]}/>
             <HomeCarousel data= {womenClosthes} sectionName={"FLASH SALE"} textColor={green[500]}/>
             
         </div>
